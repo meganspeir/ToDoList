@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--My To-Do List-->
+        <!--My List-->
         <scene sceneID="AGd-Jc-lEt">
             <objects>
                 <tableViewController id="gqL-yW-oRb" customClass="XYZToDoListTableViewController" sceneMemberID="viewController">
@@ -245,7 +245,7 @@
                             <outlet property="delegate" destination="gqL-yW-oRb" id="5Mo-RQ-Vkf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My To-Do List" id="GIZ-41-TgF">
+                    <navigationItem key="navigationItem" title="My List" id="GIZ-41-TgF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="prx-Br-fQB">
                             <connections>
                                 <segue destination="gv7-sG-JQv" kind="presentation" id="MZd-8i-jpM"/>
@@ -259,7 +259,7 @@
             </objects>
             <point key="canvasLocation" x="763" y="338"/>
         </scene>
-        <!--Add To-Do Item-->
+        <!--Add Item-->
         <scene sceneID="weG-hz-lRx">
             <objects>
                 <viewController id="rLD-op-pdu" customClass="XYZAddToDoItemViewController" sceneMemberID="viewController">
@@ -271,7 +271,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mEq-bo-bO2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mEq-bo-bO2">
                                 <rect key="frame" x="16" y="132" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -284,7 +284,7 @@
                             <constraint firstItem="mEq-bo-bO2" firstAttribute="top" secondItem="GOH-dv-WmN" secondAttribute="bottom" constant="68" id="J4F-jW-Mqg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add To-Do Item" id="vXo-OB-t9e">
+                    <navigationItem key="navigationItem" title="Add Item" id="vXo-OB-t9e">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="XkK-Bq-eZt">
                             <connections>
                                 <segue destination="uKa-9V-UeX" kind="unwind" unwindAction="unwindToList:" id="Rhq-K6-DUl"/>
