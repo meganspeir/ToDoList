@@ -45,11 +45,44 @@
     [self loadInitialData];
     
     // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
+    // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller. [EDIT TO DELETE] - How do I actually add the function of deletion???
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
+
+/*
+// From the docs:developer.apple.com/Library/ios/documentation/UserExperience/Conceptual/TableView_iPhone/ManageInsertDeleteRow/ManageInsertDeleteRow.html#//apple_ref/doc/uid/TP40007451-CH10-SW1
+ 
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    [UITableView setEditing:editing animated:YES];
+    if (editing) {
+        UIButton.enabled = NO;
+    } else {
+        UIButton.enabled = YES;
+    }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SimpleEditableListAppDelegate *controller = (SimpleEditableListAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (indexPath.row == [controller countOfList]-1) {
+        return UITableViewCellEditingStyleInsert;
+    } else {
+        return UITableViewCellEditingStyleDelete;
+    }
+}
+ 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // If row is deleted, remove it from the list.
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        XYZToDoListTableViewController *controller = (SimpleEditableListAppDelegate *)[[UIApplication sharedApplication] delegate];
+        [controller removeObjectFromListAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
